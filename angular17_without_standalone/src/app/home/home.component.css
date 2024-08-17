@@ -1,0 +1,59 @@
+/* home.component.css */
+
+.container-fluid {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.btn-group {
+  margin-top: 10px;
+}
+
+.btn-outline-secondary {
+  margin-right: 5px;
+}
+
+.btn-group > .btn {
+  padding: 5px 10px;
+}
+
+.btn-group > .btn:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-group > .btn.selected {
+  background-color: #007bff; /* Change to your desired color */
+  color: #fff; /* Change to your desired color */
+}
+
+.btn-group > .btn.selected:hover {
+  background-color: #0056b3; /* Change to your desired color */
+  color: #fff; /* Change to your desired color */
+}

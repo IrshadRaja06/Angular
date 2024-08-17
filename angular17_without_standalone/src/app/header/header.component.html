@@ -1,0 +1,56 @@
+<div class="container-fluid fixed-top card" [ngClass]="{'bg-transparent': isTransparent, 'bg-light': !isTransparent}" style="padding: 20px;">
+  <div class="d-flex align-items-center justify-content-between">
+    <!-- Menu Icon -->
+    <div>
+      <div class="ml-4" style="padding-right:30px;">
+        <a routerLink="/menu" class="text-decoration-none">
+          <span style="font-size: 2em;">
+            <i class="bi bi-list"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- Heading -->
+    <div class="text-center flex-grow-1">
+      <h1 class="fs-1">K.R Fashion</h1>
+    </div>
+    <!-- Icons -->
+    <div class="d-flex align-items-center">
+      <!-- Add to cart icon -->
+      <div class="mr-md-5" style="padding-right: 10px;"> <!-- Reduced padding for medium screens -->
+        <a routerLink="/add-to-card" class="text-decoration-none ">
+          <span style="font-size: 2em;">
+            <i class="bi bi-cart"></i>
+          </span>
+        </a>
+      </div>
+      <!-- Login/Sign-up icon -->
+      <div>
+        <!-- Display the login link if user is not logged in -->
+        <ng-container *ngIf="!isLoggedIn()">
+          <a routerLink="/login" class="text-decoration-none">
+            <span style="font-size: 2em;">
+              <i class="bi bi-person"></i>
+            </span>
+          </a>
+        </ng-container>
+      
+        <!-- Display the dashboard link if user is logged in -->
+        <ng-container *ngIf="isLoggedIn()">
+          <a routerLink="/dashboard" class="text-decoration-none">
+            <span style="font-size: 2em;">
+              <i class="bi bi-person"></i>
+            </span>
+          </a>
+        </ng-container>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<video id="videoPlayer" autoplay loop muted class="w-100">
+  <source src="assets/video.mp4" type="video/mp4">
+</video>
+
+            

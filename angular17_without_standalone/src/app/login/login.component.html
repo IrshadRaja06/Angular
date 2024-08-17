@@ -1,0 +1,38 @@
+<!-- login.component.html -->
+<div class="login-container custom-login-container">
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-auto">
+                <!-- Close button using Bootstrap's built-in close button -->
+                <a routerLink="/"><button type="button" class="btn-close" aria-label="Close"></button></a>
+            </div>
+        </div>
+    </div>
+    
+    <form class="login-form" (ngSubmit)="login()">
+      <!-- Username field -->
+      <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required [(ngModel)]="username" #usernameInput="ngModel">
+      </div>
+      
+      <!-- Password field -->
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required [(ngModel)]="password" #passwordInput="ngModel">
+      </div>
+      
+      <!-- Submit button -->
+      <button type="submit">Login</button>
+      
+      <!-- Display error message -->
+      <div *ngIf="loginError" class="error-message" class="text-danger" >{{ loginError }}</div>
+      
+      <div class="gap"></div>
+      
+      <!-- Link to sign up page -->
+      <p class="text-center">Don't have an account?
+          <a routerLink="/signup">Sign Up</a>
+      </p>
+    </form>
+  </div>

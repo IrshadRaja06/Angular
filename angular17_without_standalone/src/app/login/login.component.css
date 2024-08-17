@@ -1,0 +1,87 @@
+.custom-login-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.custom-login-container .login-form {
+  margin-bottom: 20px;
+}
+
+.custom-login-container .gap {
+  height: 10px;
+}
+
+.custom-login-container .login-form h2 {
+  text-align: center;
+}
+
+.custom-login-container .form-group {
+  margin-bottom: 15px;
+}
+
+.custom-login-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.custom-login-container .form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.custom-login-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom-login-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.custom-login-container .action-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.custom-login-container .action-link:hover {
+  text-decoration: underline;
+}
+
+.custom-login-container .login-form.sign-in h2 {
+  color: #ff6347;
+}
+
+.custom-login-container .login-form.sign-in p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.custom-login-container .login-form.sign-in button[type="submit"] {
+  background-color: #ff6347;
+}
+
+a{
+  color: #007bff; 
+  cursor: pointer;
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline; 
+}

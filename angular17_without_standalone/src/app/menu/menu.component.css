@@ -1,0 +1,71 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0; /* Position the menu to the left */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .menu:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque white background on hover */
+  }
+  
+  .btn-close {
+    z-index: 1100;
+  }
+  
+  .btn-close:hover {
+    transform: scale(1.2); /* Scale effect on hover */
+  }
+   
+  .list-group-item {
+    /* Adjust text size */
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  @media (max-width: 991.98px) {
+    /* Large devices (desktops, less than 992px) */
+    .list-group-item {
+      font-size: 14px; /* Decrease text size for large devices */
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    /* Medium devices (tablets, less than 768px) */
+    .list-group-item {
+      font-size: 12px; /* Decrease text size for medium devices */
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    /* Small devices (phones, less than 576px) */
+    .list-group-item {
+      font-size: 10px; /* Decrease text size for small devices */
+    }
+  }
+ 
+  
+  
+  
+  .menu .list-group-item {
+    border-top: 1px solid #ccc; /* Add top border */
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+  }
+  
+  .menu .list-group-item:last-child {
+    border-bottom: none; /* Remove bottom border for the last item */
+  }
+  
+  .menu .list-group-item a {
+    text-decoration: none; /* Remove default link underline */
+  }
+  
+  .menu .list-group-item:hover {
+    background-color: #e9ecef; /* Add slightly darker background color on hover */
+  }
+  

@@ -1,0 +1,13 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0; /* Position the menu to the left */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+  

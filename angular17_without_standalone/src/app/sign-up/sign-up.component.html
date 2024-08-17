@@ -1,0 +1,54 @@
+<div class="signup-container custom-signup-container">
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-auto">
+                <!-- Close button using Bootstrap's built-in close button -->
+                <a routerLink="/"><button type="button" class="btn-close" aria-label="Close"></button></a>
+            </div>
+        </div>
+    </div>
+    
+    <form class="signup-form" #signupForm="ngForm" (ngSubmit)="signUp(signupForm)">
+        <!-- Username field -->
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="userData.username" required #username="ngModel">
+            <div *ngIf="username.touched && username.invalid" class="error-message">Username is required</div>
+        </div>
+        
+        <!-- Email field -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="userData.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" #email="ngModel">
+            <div *ngIf="email.touched && email.invalid" class="error-message">
+                <div *ngIf="email.errors?.['required']">Email is required</div>
+                <div *ngIf="email.errors?.['pattern']">Invalid email format</div>
+            </div>
+        </div>
+        
+        <!-- Password field -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="userData.password" required minlength="8" #password="ngModel">
+            <div *ngIf="password.touched && password.invalid" class="error-message">
+                <div *ngIf="password.errors?.['required']">Password is required</div>
+                <div *ngIf="password.errors?.['minlength']">Password must be at least 8 characters long</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="otp">OTP</label>
+            <input type="text" id="otp" name="otp" [(ngModel)]="userData.otp" required #otp="ngModel">
+            <div *ngIf="otp.touched && otp.invalid" class="error-message">
+                <div *ngIf="otp.errors?.['required']">OTP is required</div>
+            </div>
+        </div>
+        
+        <!-- Submit button -->
+        <button type="submit" [disabled]="!signupForm.form.valid">Sign Up</button>
+        
+        <!-- Display overall error message -->
+        <div *ngIf="signupError" class="error-message" class="text-danger" >{{ signupError }}</div>
+        <div class="gap"></div>
+    </form>
+</div>

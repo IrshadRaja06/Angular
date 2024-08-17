@@ -1,0 +1,52 @@
+  <div class="container-fluid">
+   
+    <br>
+    <div class="container-fluid card">
+      <div class="container-fluid card-body">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let product of products">
+            <div class="card mb-4 shadow-sm">
+              <img [src]="product.imageUrl" class="bd-placeholder-img card-img-top" alt="{{ product.name }}">
+              <div class="card-body text-center">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.description }}</p>
+                <p class="card-text">Cost: ₹{{ product.cost }}</p>
+                <div class="form-group">
+                  <label for="sizeSelect{{product.id}}" class="font-weight-bold"></label>
+                <div class="btn-group" role="group" aria-label="Size Options">
+                  <button type="button" 
+                          class="btn btn-outline-secondary" 
+                          (click)="selectSize('S', product)"
+                          [ngClass]="{'selected': selectedSizes[product.id] === 'S'}">S</button>
+                  <button type="button" 
+                          class="btn btn-outline-secondary" 
+                          (click)="selectSize('M', product)"
+                          [ngClass]="{'selected': selectedSizes[product.id] === 'M'}">M</button>
+                  <button type="button" 
+                          class="btn btn-outline-secondary" 
+                          (click)="selectSize('L', product)"
+                          [ngClass]="{'selected': selectedSizes[product.id] === 'L'}">L</button>
+                  <button type="button" 
+                          class="btn btn-outline-secondary" 
+                          (click)="selectSize('XL', product)"
+                          [ngClass]="{'selected': selectedSizes[product.id] === 'XL'}">XL</button>
+                  <button type="button" 
+                          class="btn btn-outline-secondary" 
+                          (click)="selectSize('XXL', product)"
+                          [ngClass]="{'selected': selectedSizes[product.id] === 'XXL'}">XXL</button>
+                  <!-- Add more size buttons as needed -->
+                </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center"> 
+                  <div class="btn-group" >
+                    <a routerLink="/add-to-card">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addToCart(product)">Add to Cart</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>

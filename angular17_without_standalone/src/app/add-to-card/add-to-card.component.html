@@ -1,0 +1,33 @@
+<div class="menu bg-light" [@slideInOut]="cardState">
+  <div class="container-fluid">
+    <div class="row justify-content-end">
+      <div class="col-auto">
+        <a routerLink="/">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="sidebar">
+    <div *ngFor="let item of cartService.cartItems">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <img [src]="item.imageUrl" class="bd-placeholder-img card-img-top" alt="{{ item.name }}">
+        </div>
+        <div class="col">
+          <p>{{ item.name }} - ${{ item.cost }}</p>
+        
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-sm btn-outline-danger" (click)="removeFromCart(item)">Remove</button>
+        </div>
+      </div>
+    </div>
+    <p>Total Cost: ${{ cartService.totalCost }}</p>
+  </div>
+</div>
+
+
+
+      

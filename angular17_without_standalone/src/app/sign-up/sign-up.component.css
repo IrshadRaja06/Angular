@@ -1,0 +1,55 @@
+.custom-signup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 2; 
+}
+
+.signup-form {
+    margin-bottom: 20px;
+}
+
+.signup-form h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #28a745; /* Sign up button color */
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Hover color for sign up button */
+}
+
+.gap {
+    height: 10px;
+}
+
